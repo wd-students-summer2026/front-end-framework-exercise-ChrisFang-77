@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.shadow {
+    border-radius: 10px;
+}
+
+img {
+    border-radius: 10px;
+}
+
+nav a {
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #93c5fd;
+}
+
+h1 {
+    letter-spacing: 1px;
+}

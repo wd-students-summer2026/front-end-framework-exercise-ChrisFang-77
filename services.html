@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Services</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body class="bg-gray-100">
+
+    <div class="max-w-6xl mx-auto px-4">
+
+        <nav x-data="{ open:false }" class="bg-blue-900 text-white p-4">
+
+            <div class="flex justify-between">
+
+                <a href="professional_site.html">
+                    Chris Advisory
+                </a>
+
+                <button
+                    @click="open=!open"
+                    class="md:hidden">
+                    ☰
+                </button>
+
+                <div class="hidden md:flex gap-6">
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+
+            </div>
+
+            <div
+                x-show="open"
+                class="md:hidden mt-4 space-y-2">
+
+                <a href="services.html" class="block">
+                    Services
+                </a>
+
+                <a href="contact.html" class="block">
+                    Contact
+                </a>
+
+            </div>
+
+        </nav>
+
+        <h1 class="text-4xl font-bold mt-8">
+            Services
+        </h1>
+
+        <div class="grid md:grid-cols-2 gap-6 mt-6">
+
+            <div class="bg-white p-6 shadow">
+                Career Coaching
+            </div>
+
+            <div class="bg-white p-6 shadow">
+                Resume Review
+            </div>
+
+            <div class="bg-white p-6 shadow">
+                Networking Strategy
+            </div>
+
+            <div class="bg-white p-6 shadow">
+                Interview Preparation
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

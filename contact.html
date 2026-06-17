@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body class="bg-gray-100">
+
+    <div class="max-w-6xl mx-auto px-4">
+
+        <nav x-data="{ open:false }" class="bg-blue-900 text-white p-4">
+
+            <div class="flex justify-between items-center">
+
+                <a href="professional_site.html" class="text-2xl font-bold">
+                    Chris Advisory
+                </a>
+
+                <button
+                    @click="open=!open"
+                    class="md:hidden text-2xl">
+                    ☰
+                </button>
+
+                <div class="hidden md:flex gap-6">
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+
+            </div>
+
+            <div
+                x-show="open"
+                class="md:hidden mt-4 space-y-2">
+
+                <a href="services.html" class="block">
+                    Services
+                </a>
+
+                <a href="contact.html" class="block">
+                    Contact
+                </a>
+
+            </div>
+
+        </nav>
+
+        <header class="text-center py-10">
+
+            <h1 class="text-4xl font-bold">
+                Contact Information
+            </h1>
+
+            <p class="mt-4 text-lg">
+                Feel free to connect with me regarding finance, networking,
+                and career opportunities.
+            </p>
+
+        </header>
+
+        <div class="bg-white p-8 shadow rounded">
+
+            <h2 class="text-2xl font-bold mb-4">
+                Get In Touch
+            </h2>
+
+            <p class="mb-3">
+                <strong>Name:</strong> Chris Fang
+            </p>
+
+            <p class="mb-3">
+                <strong>Email:</strong> yf2898@nyu.edu
+            </p>
+
+            <p class="mb-3">
+                <strong>University:</strong> New York University
+            </p>
+
+            <p class="mb-3">
+                <strong>Major:</strong> Economics & Mathematics
+            </p>
+
+            <p>
+                <strong>Career Interest:</strong> Investment Banking, M&A, and Finance
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

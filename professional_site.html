@@ -1,2 +1,122 @@
-<!-- insert your HTML code here -->
-<!-- don't forget to make two other HTML documents also -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chris Fang Financial Advisory</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body class="bg-gray-100">
+
+<div class="max-w-6xl mx-auto px-4">
+
+<nav x-data="{ open:false }" class="bg-[#1e3a8a] text-white p-4">
+
+    <div class="flex justify-between items-center">
+
+        <a href="professional_site.html" class="text-2xl font-bold">
+            Chris Advisory
+        </a>
+
+        <button
+            @click="open=!open"
+            class="md:hidden text-2xl">
+            ☰
+        </button>
+
+        <div class="hidden md:flex gap-6">
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div
+        x-show="open"
+        class="md:hidden mt-4 space-y-2">
+
+        <a href="services.html" class="block">Services</a>
+        <a href="contact.html" class="block">Contact</a>
+
+    </div>
+
+</nav>
+
+<header class="text-center py-10">
+
+    <h1 class="text-[42px] md:text-5xl font-bold">
+        Financial Career Guidance
+    </h1>
+
+    <p class="mt-4 text-lg">
+        Helping students explore careers in Investment Banking and Finance.
+    </p>
+
+</header>
+
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <div class="bg-white p-6 shadow">
+        <h2 class="text-xl font-bold">Investment Banking</h2>
+        <p>Learn valuation, M&A, and recruiting strategies.</p>
+    </div>
+
+    <div class="bg-white p-6 shadow">
+        <h2 class="text-xl font-bold">Networking</h2>
+        <p>Build professional relationships through coffee chats.</p>
+    </div>
+
+    <div class="bg-white p-6 shadow">
+        <h2 class="text-xl font-bold">Career Planning</h2>
+        <p>Create a roadmap toward internships and full-time roles.</p>
+    </div>
+
+</section>
+
+<section
+x-data="{
+images:[
+'images/nyu.jpeg',
+'images/basketball.jpg',
+'images/shanghai.jpeg'
+],
+current:0
+}"
+class="mt-10 text-center">
+
+    <h2 class="text-2xl font-bold mb-4">
+        Image Carousel
+    </h2>
+
+    <img
+        :src="images[current]"
+        class="mx-auto w-[500px] h-80 object-cover rounded">
+
+    <div class="mt-4">
+
+        <button
+            @click="current=(current-1+images.length)%images.length"
+            class="bg-blue-900 text-white px-4 py-2">
+
+            Previous
+
+        </button>
+
+        <button
+            @click="current=(current+1)%images.length"
+            class="bg-blue-900 text-white px-4 py-2">
+
+            Next
+
+        </button>
+
+    </div>
+
+</section>
+
+</div>
+
+</body>
+</html>
